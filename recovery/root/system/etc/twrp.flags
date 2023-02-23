@@ -16,11 +16,11 @@
 /sbl1               emmc      /dev/block/bootdevice/by-name/sbl1
 /rpm                emmc      /dev/block/bootdevice/by-name/rpm
 /tz                 emmc      /dev/block/bootdevice/by-name/tz
-/modemst1           emmc      /dev/block/bootdevice/by-name/modem_st1    flags=display="Modem_ST1";backup=1;flashimg=1
-/modemst2           emmc      /dev/block/bootdevice/by-name/modem_st2    flags=display="Modem_ST2";backup=1;flashimg=1
+/modemst1           emmc      /dev/block/bootdevice/by-name/modem_st1               flags=display="Modem_ST1";backup=1;flashimg=1
+/modemst2           emmc      /dev/block/bootdevice/by-name/modem_st2               flags=display="Modem_ST2";backup=1;flashimg=1
 /static_nv_bk       emmc      /dev/block/bootdevice/by-name/oppostanvbk
 /oppodycnvbk        emmc      /dev/block/bootdevice/by-name/oppodycnvbk
-/splash             emmc      /dev/block/bootdevice/by-name/splash                    flags=display="Splash";slotselect;flashimg=1
+/splash             emmc      /dev/block/bootdevice/by-name/splash                  flags=display="Splash";slotselect;flashimg=1
 /reserve4           emmc      /dev/block/bootdevice/by-name/reserve4
 /dsp                emmc      /dev/block/bootdevice/by-name/dsp
 /DRIVER             emmc      /dev/block/bootdevice/by-name/DRIVER
@@ -35,10 +35,10 @@
 /xbl                emmc      /dev/block/bootdevice/by-name/xbl
 
 # Mount Vendor Partitions
-/persist         ext4      /dev/block/bootdevice/by-name/persist          flags=display="Persist";backup=1;flashimg=1
-/oplusreserve    ext4      /dev/block/by-name/oplusreserve2
-/bluetooth         vfat      /dev/block/bootdevice/by-name/bluetooth        flags=slotselect;backup=1
-/dsp                 ext4      /dev/block/bootdevice/by-name/dsp              flags=slotselect;backup=1
+/persist            ext4      /dev/block/bootdevice/by-name/persist          flags=display="Persist";backup=1;flashimg=1
+/oplusreserve       ext4      /dev/block/by-name/oplusreserve2
+/bluetooth          vfat      /dev/block/bootdevice/by-name/bluetooth        flags=slotselect;backup=1
+/dsp                ext4      /dev/block/bootdevice/by-name/dsp              flags=slotselect;backup=1
 
 # External Partitions
 /external_sd        vfat      /dev/block/mmcblk0p1    /dev/block/mmcblk0            flags=display="External Storage";storage;wipeingui;removable
