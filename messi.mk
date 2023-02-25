@@ -61,11 +61,11 @@ PRODUCT_PACKAGES += \
 
 # A/B Device
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS ?= system system_ext vendor product odm boot recovery vbmeta vbmeta_vendor vbmeta_system dtbo
+AB_OTA_PARTITIONS ?= system system_ext vendor product odm boot recovery vbmeta vbmeta_vendor vbmeta_system dtbo abl bluetooth devcfg dsp engineering_cdt featenabler hyp imagefv keymaster modem multiimgoem my_bigball my_carrier my_company my_engineering my_heytap my_manifest my_preload my_product my_region my_stock oplus_sec oplusstanvbk product qupfw rpm splash,system tz uefisecapp xbl xbl_config
 TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := RMX3521
+TARGET_OTA_ASSERT_DEVICE := RMX3521,RE54E2L1,ossi,qssi
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -79,4 +79,5 @@ SHIPPING_API_LEVEL := 31
 
 # OEM otacerts
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/security/local_OTA
+    $(LOCAL_PATH)/security/local_OTA \
+    $(LOCAL_PATH)/security/special_OTA

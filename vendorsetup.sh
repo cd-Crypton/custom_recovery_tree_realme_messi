@@ -58,7 +58,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
     export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
   
-  	# A/B-Related
+# A/B-Related
     export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
     export OF_VIRTUAL_AB_DEVICE=1
     export OF_VANILLA_BUILD=0

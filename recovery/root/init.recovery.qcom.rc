@@ -17,17 +17,7 @@ on post-fs
 
 on boot
     start health-hal-2-1
-    
-on boot && property:ro.boot.prjname=*
-    start load_realme_props
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
-
-service load_realme_props /system/bin/load_realme_props.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
