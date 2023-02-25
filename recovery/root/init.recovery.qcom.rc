@@ -8,16 +8,26 @@ on init
     setprop sys.usb.configfs 1
     setprop prepdecrypt.setpatch true
 
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
 on post-fs
     start boot-hal-1-1
 
 on boot
     start health-hal-2-1
+    
+on boot && property:ro.boot.prjname=*
+    start load_realme_props
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
     write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
 
-on fs
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+service load_realme_props /system/bin/load_realme_props.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0

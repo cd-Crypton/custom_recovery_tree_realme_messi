@@ -65,7 +65,7 @@ AB_OTA_PARTITIONS ?= system system_ext vendor product odm boot recovery vbmeta v
 TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := RMX3521,RE54E2L1,ossi,qssi
+TARGET_OTA_ASSERT_DEVICE := RMX3521
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
