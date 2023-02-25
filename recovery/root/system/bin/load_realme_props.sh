@@ -2,7 +2,7 @@
 # This script is needed to load properties for oplus devices
 
 # Unofficial Name
-messi=$(getprop ro.separate.soft)
+messi=$(getprop ro.boot.prjname)
 
 # Official Names
 realme9=RMX3521
