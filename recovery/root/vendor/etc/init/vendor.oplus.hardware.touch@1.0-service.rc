@@ -1,0 +1,14 @@
+service vendor.touch-1-0  /system/bin/vendor.oplus.hardware.touch@1.0-service
+    user root
+    group root everybody
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
+
+on boot
+    chown root root /dev/tp_misc
+    chown root root /proc/touchpanel/tp_fw_update
+    chown root root /proc/touchpanel/oplus_tp_limit_enable
+    chown root root /proc/touchpanel/oplus_tp_direction
+    chown root root /proc/touchpanel/double_tap_enable
+    chown root root /proc/touchpanel/coordinate

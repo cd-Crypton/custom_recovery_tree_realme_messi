@@ -17,6 +17,7 @@ on post-fs
 
 on boot
     start health-hal-2-1
+    start vendor.touch-1-0
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
