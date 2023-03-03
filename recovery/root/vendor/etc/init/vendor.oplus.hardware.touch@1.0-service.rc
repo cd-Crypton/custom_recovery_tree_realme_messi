@@ -12,3 +12,17 @@ on boot
     chown root root /proc/touchpanel/oplus_tp_direction
     chown root root /proc/touchpanel/double_tap_enable
     chown root root /proc/touchpanel/coordinate
+    chown root root /proc/touchpanel/game_switch_enable
+    chown root root /proc/touchpanel/fp_enable
+    chown root root /proc/touchpanel/baseline_test
+    chown root root /proc/touchpanel/kernel_grip_handle
+    chown root root /proc/touchpanel/curved_size
+    chown root root /proc/touchpanel/charge_detect
+    chown root root /proc/touchpanel/wireless_charge_detect
+    chown root root /proc/touchpanel/gesture_support
+
+on post-fs-data
+    chmod 0666 /mnt/vendor/persist/data/ec2_aging_data.txt
+
+on property:ro.boot.mode=charger
+    start vendor.touch-1-0
