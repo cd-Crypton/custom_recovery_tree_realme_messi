@@ -163,4 +163,5 @@ TW_DEVICE_VERSION := Crypton
 
 # Debugging Configs
 TWRP_INCLUDE_LOGCAT := true
+TWRP_EVENT_LOGGING := true
 TARGET_USES_LOGD := true
