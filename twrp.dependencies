@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "cd-Crypton/android_kernel_realme_messi",
+    "target_path": "kernel/realme/messi",
+    "branch": "messi"
+  }
+]
